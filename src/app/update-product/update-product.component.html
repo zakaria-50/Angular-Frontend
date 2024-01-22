@@ -1,0 +1,52 @@
+
+
+<div class="col-md-8 offset-md-3 px-3">
+    <h3> Update Product </h3>
+    
+    <form (ngSubmit)="onSubmit()" class="px-3">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="product.name" name="name" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea class="form-control" id="description" [(ngModel)]="product.description" name="description" required></textarea>
+        </div>
+      <!--
+        <div class="form-group">
+            <label for="description">Manifacturing City</label>
+            <textarea class="form-control" id="manifacturingcity" [(ngModel)]="product.manifacturingcity" name="manifacturingcity" required></textarea>
+          </div>
+       -->
+      
+        <div class="form-group">
+          <label for="datePublication">Date de publication</label>
+          <input type="date" class="form-control" id="datePublication" [(ngModel)]="product.datedepublication" name="datePublication" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input type="number" class="form-control" id="price" [(ngModel)]="product.price" name="price" required>
+        </div>
+      
+        <div class="form-group">
+          <label for="brand">Brand</label>
+          <input type="text" class="form-control" id="brand" [(ngModel)]="product.brand" name="brand" required>
+        </div>
+      
+        <div class="form-group">
+            <label for="imageUrl">Image URL</label>
+            <input type="file" class="form-control"
+                   multiple value="select" 
+                   id="imageUrl" [(ngModel)]="product.imageurl" name="imageUrl" required>
+        </div>
+        
+        
+      
+        <button type="submit" class="btn btn-primary">
+            Submit</button>
+      </form>
+    <div style="margin: 10%;"></div>
+      
+    </div>
